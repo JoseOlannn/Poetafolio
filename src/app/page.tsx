@@ -8,6 +8,9 @@ import Philosophy from "@/components/Philosophy";
 import Process from "@/components/Process";
 import Projects from "@/components/Projects";
 import Stack from "@/components/Stack";
+import Certifications from "@/components/Certifications";
+import Experience from "@/components/Experience";
+import Infocod from "@/components/Infocod";
 
 export default function Home() {
   return (
@@ -20,6 +23,9 @@ export default function Home() {
         <Projects />
         <Stack />
         <Process />
+        <Certifications />
+        <Experience />
+        <Infocod />
         <Philosophy />
         <Contact />
       </main>

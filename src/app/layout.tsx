@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat, JetBrains_Mono } from "next/font/google";
+import { LanguageProvider } from "@/context/LanguageContext";
+import InteractiveBackground from "@/components/InteractiveBackground";
 import "./globals.css";
 
 const inter = Inter({
@@ -36,7 +38,12 @@ export default function RootLayout({
       lang="es"
       className={`${inter.variable} ${montserrat.variable} ${jetbrains.variable} antialiased`}
     >
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>
+          <InteractiveBackground />
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

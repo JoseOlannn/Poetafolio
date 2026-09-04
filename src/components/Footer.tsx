@@ -1,8 +1,13 @@
-import { navLinks } from "@/data/site";
+"use client";
+import { navLinksData } from "@/data/site";
+import { useLanguage } from "@/context/LanguageContext";
 
 const PALETTE = ["#d96c4a", "#e8b84b", "#7ba78d", "#2b4963"];
 
 export default function Footer() {
+  const { language } = useLanguage();
+  const navLinks = navLinksData[language];
+
   return (
     <footer className="border-t border-line bg-paper-2/60 px-6 py-12 md:px-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 md:flex-row md:justify-between">
@@ -37,7 +42,7 @@ export default function Footer() {
         </div>
       </div>
       <p className="mt-8 text-center font-mono text-xs text-muted">
-        © {new Date().getFullYear()} Jose Olan · Hecho con código, datos y propósito.
+        © {new Date().getFullYear()} Jose Olan — {language === "en" ? "Built with code, data, and purpose." : "Hecho con código, datos y propósito."}
       </p>
     </footer>
   );

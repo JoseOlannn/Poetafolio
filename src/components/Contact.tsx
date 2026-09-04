@@ -1,5 +1,10 @@
+"use client";
+import { useSafeReducedMotion } from "@/hooks/useSafeReducedMotion";
+
 import { socials } from "@/data/site";
-import { Reveal } from "./SignatureLine";
+import { Reveal, Stagger, StaggerItem } from "./SignatureLine";
+import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
 
 function IconGithub() {
   return (
@@ -33,45 +38,52 @@ function iconFor(label: string) {
 }
 
 export default function Contact() {
+  const reduce = useSafeReducedMotion();
+  const { language } = useLanguage();
   return (
     <section id="contacto" className="scroll-mt-24 px-6 py-28 md:px-10">
       <div className="mx-auto max-w-4xl text-center">
         <Reveal>
           <p className="eyebrow justify-center">
-            <span className="text-terra">//</span> 07 — Contacto
+            <span className="text-terra">//</span> 09 — {language === "en" ? "Contact" : "Contacto"}
           </p>
           <h2 className="font-display mt-6 text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-            ¿Construimos algo?
+            {language === "en" ? "Shall we build something?" : "¿Construimos algo?"}
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            Si tienes una idea, proyecto o problema que pueda convertirse en
-            software, hablemos.
+            {language === "en" ? "If you have an idea, project or problem that can be turned into software, let's talk." : "Si tienes una idea, proyecto o problema que pueda convertirse en software, hablemos."}
           </p>
         </Reveal>
 
-        <Reveal delay={0.08}>
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
-            {socials.map((s) => (
-              <a
-                key={s.label}
+        <Stagger className="mt-12 flex flex-wrap items-center justify-center gap-4" stagger={0.08}>
+          {socials.map((s) => (
+            <StaggerItem key={s.label}>
+              <motion.a
                 href={s.href}
-                target={s.label === "Email" ? undefined : "_blank"}
+                target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 rounded-full border border-ink/15 px-6 py-3 font-mono text-sm text-ink transition-all duration-300 hover:-translate-y-0.5 hover:border-terra hover:text-terra"
+                whileHover={reduce ? undefined : { y: -2, scale: 1.02 }}
+                whileTap={reduce ? undefined : { scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 400, damping: 18 }}
+                className="group inline-flex items-center gap-3 rounded-full border border-ink/15 px-6 py-3 font-mono text-sm text-ink transition-colors duration-300 hover:border-terra hover:text-terra hover:shadow-[0_12px_24px_-16px_rgba(38,33,25,0.22)]"
               >
-                <span className="text-muted transition-colors group-hover:text-terra">
-                  {iconFor(s.label)}
-                </span>
+                <span className="text-muted transition-colors group-hover:text-terra">{iconFor(s.label)}</span>
                 {s.label}
-              </a>
-            ))}
-          </div>
-        </Reveal>
+              </motion.a>
+            </StaggerItem>
+          ))}
+        </Stagger>
 
         <Reveal delay={0.16}>
-          <p className="mt-14 font-mono text-sm text-muted">
+          <motion.p
+            initial={reduce ? false : { opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-14 font-mono text-sm text-muted"
+          >
             <span className="text-ocean">{"//"}</span> let&apos;s build something.
-          </p>
+          </motion.p>
         </Reveal>
       </div>
     </section>

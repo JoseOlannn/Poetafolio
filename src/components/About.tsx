@@ -10,7 +10,7 @@ export default function About() {
   const reduce = useSafeReducedMotion();
   const { language } = useLanguage();
   return (
-    <section id="sobre-mi" className="scroll-mt-24 px-6 py-28 md:px-10">
+    <section id="sobre-mi" className="scroll-mt-24 px-6 py-16 md:py-28 md:px-10">
       <div className="mx-auto max-w-6xl">
         <SectionHeading 
           index="01" 

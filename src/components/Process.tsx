@@ -15,7 +15,7 @@ export default function Process() {
   const process = processData[language];
 
   return (
-    <section className="bg-paper-2/60 px-6 py-28 md:px-10">
+    <section className="bg-paper-2/60 px-6 py-16 md:py-28 md:px-10">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           index="05"

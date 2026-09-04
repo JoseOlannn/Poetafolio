@@ -41,7 +41,7 @@ export default function Contact() {
   const reduce = useSafeReducedMotion();
   const { language } = useLanguage();
   return (
-    <section id="contacto" className="scroll-mt-24 px-6 py-28 md:px-10">
+    <section id="contacto" className="scroll-mt-24 px-6 py-16 md:py-28 md:px-10">
       <div className="mx-auto max-w-4xl text-center">
         <Reveal>
           <p className="eyebrow justify-center">

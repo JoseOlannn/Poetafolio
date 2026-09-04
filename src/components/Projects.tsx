@@ -10,7 +10,7 @@ export default function Projects() {
   const projects = projectsData[language];
 
   return (
-    <section id="proyectos" className="scroll-mt-24 bg-paper-2/60 px-6 py-28 md:px-10">
+    <section id="proyectos" className="scroll-mt-24 bg-paper-2/60 px-6 py-16 md:py-28 md:px-10">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           index="03"

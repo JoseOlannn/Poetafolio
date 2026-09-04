@@ -31,7 +31,7 @@ export default function Infocod() {
   const { language } = useLanguage();
   const capabilities = capabilitiesData[language];
   return (
-    <section id="infocod" className="scroll-mt-24 px-6 py-28 md:px-10">
+    <section id="infocod" className="scroll-mt-24 px-6 py-16 md:py-28 md:px-10">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           index="08"

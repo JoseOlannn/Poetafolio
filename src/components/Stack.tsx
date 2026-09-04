@@ -13,7 +13,7 @@ export default function Stack() {
   const skillGroups = skillGroupsData[language];
 
   return (
-    <section id="stack" className="scroll-mt-24 px-6 py-28 md:px-10">
+    <section id="stack" className="scroll-mt-24 px-6 py-16 md:py-28 md:px-10">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           index="04"

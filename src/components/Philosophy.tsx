@@ -14,7 +14,7 @@ export default function Philosophy() {
   const philosophy = philosophyData[language];
 
   return (
-    <section className="px-6 py-28 md:px-10">
+    <section className="px-6 py-16 md:py-28 md:px-10">
       <div className="mx-auto max-w-6xl">
         <Reveal className="max-w-2xl">
           <h2 className="font-display mt-4 text-3xl font-bold tracking-tight text-ink sm:text-4xl">

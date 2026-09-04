@@ -80,6 +80,18 @@ export default function Hero() {
             <span className="font-light tracking-[-0.05em] text-muted"> Olan</span>
           </motion.h1>
 
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 16 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+            }}
+            className="mt-3 block max-w-full overflow-hidden"
+          >
+            <a href="https://git.io/typing-svg" target="_blank" rel="noopener noreferrer">
+              <img src="https://readme-typing-svg.herokuapp.com?font=Space+Mono&weight=500&size=20&pause=1000&color=d96c4a&center=false&vCenter=true&width=600&lines=Backend+Developer+%26+System+Design;Data+Science+%26+Business+Intelligence;Cloud+Computing+%26+DevOps;AI+%26+Machine+Learning+Explorer" alt="Typing SVG" className="max-w-full" />
+            </a>
+          </motion.div>
+
           <motion.p
             variants={{
               hidden: { opacity: 0, y: 14 },

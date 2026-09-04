@@ -47,7 +47,7 @@ export default function Navbar() {
           href="#inicio"
           className="group font-mono text-sm tracking-tight text-ink transition-colors"
         >
-          <span className="text-muted group-hover:text-terra transition-colors">//</span> jose_olan<span className="text-terra">.dev</span>
+          <span className="text-muted group-hover:text-terra transition-colors">{"//"}</span> jose_olan<span className="text-terra">.dev</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">

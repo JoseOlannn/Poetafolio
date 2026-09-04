@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useReducedMotion } from "framer-motion";
+import { useSafeReducedMotion } from "@/hooks/useSafeReducedMotion";
 
 type Props = {
   className?: string;
@@ -13,7 +13,7 @@ type Props = {
 
 export default function WarpGrid({ className = "", variant = "dark", gridSize = 40, radius = 180, strength = 42 }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const reduce = useReducedMotion();
+  const reduce = useSafeReducedMotion();
   const mouse = useRef({ x: -9999, y: -9999, tx: -9999, ty: -9999 });
 
   useEffect(() => {

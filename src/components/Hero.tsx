@@ -66,7 +66,7 @@ export default function Hero() {
             }}
             className="font-mono text-sm text-muted"
           >
-            <span className="text-terra">//</span> jose_olan.dev
+            <span className="text-terra">{"//"}</span> jose_olan.dev
           </motion.p>
 
           <motion.h1

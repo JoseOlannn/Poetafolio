@@ -25,7 +25,7 @@ export default function Stack() {
 
         <Stagger className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" stagger={0.06}>
           {skillGroups.map((group, i) => (
-            <StaggerItem key={group.title}>
+            <StaggerItem key={i}>
               <motion.div
                 whileHover={reduce ? undefined : { y: -4 }}
                 transition={{ type: "spring", stiffness: 300, damping: 22 }}

@@ -45,7 +45,7 @@ export default function Contact() {
       <div className="mx-auto max-w-4xl text-center">
         <Reveal>
           <p className="eyebrow justify-center">
-            <span className="text-terra">//</span> 09 — {language === "en" ? "Contact" : "Contacto"}
+            <span className="text-terra">{"//"}</span> 09 — {language === "en" ? "Contact" : "Contacto"}
           </p>
           <h2 className="font-display mt-6 text-4xl font-bold tracking-tight text-ink sm:text-5xl">
             {language === "en" ? "Shall we build something?" : "¿Construimos algo?"}

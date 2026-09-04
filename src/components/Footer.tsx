@@ -15,7 +15,7 @@ export default function Footer() {
           href="#inicio"
           className="font-mono text-sm text-ink transition-colors hover:text-terra"
         >
-          <span className="text-muted">//</span> jose_olan<span className="text-terra">.dev</span>
+          <span className="text-muted">{"//"}</span> jose_olan<span className="text-terra">.dev</span>
         </a>
 
         <nav className="flex flex-wrap items-center justify-center gap-6">

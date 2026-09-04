@@ -28,7 +28,7 @@ export default function SectionHeading({
         <p
           className={`eyebrow flex items-center gap-2 ${align === "center" ? "justify-center" : ""}`}
         >
-          <span className="text-terra">//</span>
+          <span className="text-terra">{"//"}</span>
           <span>
             {index} - {label}
           </span>

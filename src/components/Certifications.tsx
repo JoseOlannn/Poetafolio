@@ -58,7 +58,7 @@ export default function Certifications() {
         <div className="mt-16">
           <Reveal>
             <h3 className="mb-6 font-display text-2xl font-semibold text-ink">
-              🎓 {language === "en" ? "Core Certifications" : "Certificaciones principales"}
+              {language === "en" ? "Core Certifications" : "Certificaciones principales"}
             </h3>
           </Reveal>
           <Stagger className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5" stagger={0.08}>
@@ -102,13 +102,13 @@ export default function Certifications() {
         <div className="mt-20">
           <Reveal>
             <h3 className="mb-6 font-display text-2xl font-semibold text-ink">
-              🎖️ {language === "en" ? "Technical Badges" : "Insignias técnicas"}
+              {language === "en" ? "Technical Badges" : "Insignias técnicas"}
             </h3>
           </Reveal>
-          
-          <div className="relative flex w-full overflow-hidden">
+            
+          <div className="relative flex w-full overflow-hidden mt-6 [mask-image:linear-gradient(to_right,transparent_0,black_5%,black_95%,transparent_100%)]">
             <motion.div
-              className="flex w-max items-center gap-6 py-4"
+              className="flex w-max items-center gap-8 py-4"
               animate={{ x: ["0%", "-50%"] }}
               transition={{
                 duration: 40,

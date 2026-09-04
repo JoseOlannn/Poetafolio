@@ -19,6 +19,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     // Intentar leer de localStorage al inicio
     const stored = localStorage.getItem("preferred-language") as Language;
     if (stored === "en" || stored === "es") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLanguageState(stored);
     } else {
       // Leer preferencia del navegador si no hay nada guardado
